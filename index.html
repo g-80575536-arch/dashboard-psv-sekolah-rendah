@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard PSV Sekolah Rendah</title>
     <style>
-        /* Gaya Umum / Reset */
+        /* ==========================================
+           1. GAYA UMUM / RESET
+           ========================================== */
         * {
             margin: 0;
             padding: 0;
@@ -19,7 +21,9 @@
             padding: 20px;
         }
 
-        /* Header Dashboard */
+        /* ==========================================
+           2. HEADER DASHBOARD
+           ========================================== */
         header {
             text-align: center;
             padding: 30px;
@@ -42,7 +46,9 @@
             font-weight: bold;
         }
 
-        /* Grid Menu Utama */
+        /* ==========================================
+           3. GRID MENU UTAMA
+           ========================================== */
         .menu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -85,7 +91,9 @@
 
         .icon { font-size: 3.5rem; }
 
-        /* Kawasan Kandungan Dinamik */
+        /* ==========================================
+           4. KAWASAN KANDUNGAN (CONTENT SECTION)
+           ========================================== */
         .content-section {
             max-width: 1200px;
             margin: 0 auto 30px auto;
@@ -93,7 +101,7 @@
             border-radius: 20px;
             padding: 30px;
             box-shadow: 0 6px 12px rgba(0,0,0,0.05);
-            display: none;
+            display: none; /* Disembunyikan secara lalai */
         }
 
         /* Bar Pilihan Tahun */
@@ -134,7 +142,7 @@
             to { opacity: 1; }
         }
 
-        /* Grid Bidang */
+        /* Grid 4 Bidang */
         .bidang-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -161,7 +169,24 @@
             line-height: 1.6;
         }
 
-        /* Butang Tutup */
+        /* Gaya Butang Buku Teks Online */
+        .btn-buku-teks {
+            background-color: #e64980; 
+            color: white; 
+            text-decoration: none; 
+            padding: 8px 15px; 
+            border-radius: 10px; 
+            font-weight: bold; 
+            font-size: 0.9rem;
+            display: inline-block;
+            transition: background 0.2s;
+        }
+        
+        .btn-buku-teks:hover {
+            background-color: #d01b5c;
+        }
+
+        /* Butang Tutup Seksyen Utama */
         .btn-tutup {
             background-color: #e0e0e0;
             border: none;
@@ -172,6 +197,16 @@
             float: right;
         }
         .btn-tutup:hover { background-color: #cdcdcd; }
+
+        /* Utiliti susunan flex */
+        .tahun-header-container {
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            flex-wrap: wrap; 
+            margin-bottom: 15px;
+            gap: 10px;
+        }
     </style>
 </head>
 <body>
@@ -215,7 +250,10 @@
         </div>
 
         <div id="nota-tahun1" class="nota-tahun-content">
-            <h3>Kandungan PSV Tahun 1</h3>
+            <div class="tahun-header-container">
+                <h3>Kandungan PSV Tahun 1</h3>
+                <a href="#" target="_blank" class="btn-buku-teks">📖 Buka Buku Teks Online (Tahun 1)</a>
+            </div>
             <div class="bidang-grid">
                 <div class="bidang-box"><h4>1. Menggambar</h4><ul><li>Lukisan (Crayon/Pensel)</li><li>Capan (Pelepah/Jari)</li></ul></div>
                 <div class="bidang-box" style="border-left-color: #4dadf7;"><h4 style="color: #4dadf7;">2. Corak & Rekaan</h4><ul><li>Ikatan & Celupan asas</li><li>Titisan warna meleret</li></ul></div>
@@ -225,7 +263,10 @@
         </div>
 
         <div id="nota-tahun2" class="nota-tahun-content">
-            <h3>Kandungan PSV Tahun 2</h3>
+            <div class="tahun-header-container">
+                <h3>Kandungan PSV Tahun 2</h3>
+                <a href="#" target="_blank" class="btn-buku-teks">📖 Buka Buku Teks Online (Tahun 2)</a>
+            </div>
             <div class="bidang-grid">
                 <div class="bidang-box"><h4>1. Menggambar</h4><ul><li>Catan basah atas basah</li><li>Lipatan & Guntingan</li></ul></div>
                 <div class="bidang-box" style="border-left-color: #4dadf7;"><h4 style="color: #4dadf7;">2. Corak & Rekaan</h4><ul><li>Resis (Lilin & Water colour)</li><li>Tiupan straw</li></ul></div>
@@ -235,7 +276,10 @@
         </div>
 
         <div id="nota-tahun3" class="nota-tahun-content">
-            <h3>Kandungan PSV Tahun 3</h3>
+            <div class="tahun-header-container">
+                <h3>Kandungan PSV Tahun 3</h3>
+                <a href="#" target="_blank" class="btn-buku-teks">📖 Buka Buku Teks Online (Tahun 3)</a>
+            </div>
             <div class="bidang-grid">
                 <div class="bidang-box"><h4>1. Menggambar</h4><ul><li>Montaj (Keratan majalah)</li><li>Kolaj (Kekacang/Kertas)</li></ul></div>
                 <div class="bidang-box" style="border-left-color: #4dadf7;"><h4 style="color: #4dadf7;">2. Corak & Rekaan</h4><ul><li>Pualaman (Cat minyak & air)</li><li>Stensilan motif bunga</li></ul></div>
@@ -245,7 +289,10 @@
         </div>
 
         <div id="nota-tahun4" class="nota-tahun-content">
-            <h3>Kandungan PSV Tahun 4</h3>
+            <div class="tahun-header-container">
+                <h3>Kandungan PSV Tahun 4</h3>
+                <a href="#" target="_blank" class="btn-buku-teks">📖 Buka Buku Teks Online (Tahun 4)</a>
+            </div>
             <div class="bidang-grid">
                 <div class="bidang-box"><h4>1. Menggambar</h4><ul><li>Gurisan (Teknik tindihan krayon)</li><li>Catan landskap Pemandangan</li></ul></div>
                 <div class="bidang-box" style="border-left-color: #4dadf7;"><h4 style="color: #4dadf7;">2. Corak & Rekaan</h4><ul><li>Stensilan corak ubin</li><li>Batik lukis (Menggunakan gam)</li></ul></div>
@@ -255,7 +302,10 @@
         </div>
 
         <div id="nota-tahun5" class="nota-tahun-content">
-            <h3>Kandungan PSV Tahun 5</h3>
+            <div class="tahun-header-container">
+                <h3>Kandungan PSV Tahun 5</h3>
+                <a href="#" target="_blank" class="btn-buku-teks">📖 Buka Buku Teks Online (Tahun 5)</a>
+            </div>
             <div class="bidang-grid">
                 <div class="bidang-box"><h4>1. Menggambar</h4><ul><li>Poster (Tema Keselamatan/Alam)</li><li>Cetakan menggunakan blok</li></ul></div>
                 <div class="bidang-box" style="border-left-color: #4dadf7;"><h4 style="color: #4dadf7;">2. Corak & Rekaan</h4><ul><li>Corak Terancang (Kaligrafi)</li><li>Ikatan & Celupan corak kompleks</li></ul></div>
@@ -265,7 +315,10 @@
         </div>
 
         <div id="nota-tahun6" class="nota-tahun-content">
-            <h3>Kandungan PSV Tahun 6</h3>
+            <div class="tahun-header-container">
+                <h3>Kandungan PSV Tahun 6</h3>
+                <a href="#" target="_blank" class="btn-buku-teks">📖 Buka Buku Teks Online (Tahun 6)</a>
+            </div>
             <div class="bidang-grid">
                 <div class="bidang-box"><h4>1. Menggambar</h4><ul><li>Lukisan perspektif 2 titik lenyap</li><li>Kombinasi Seni Media Campuran</li></ul></div>
                 <div class="bidang-box" style="border-left-color: #4dadf7;"><h4 style="color: #4dadf7;">2. Corak & Rekaan</h4><ul><li>Reka bentuk grafik (Kad ucapan/Logos)</li><li>Corak digital asas</li></ul></div>
@@ -273,18 +326,36 @@
                 <div class="bidang-box" style="border-left-color: #fcc419;"><h4 style="color: #fcc419;">4. Kraf Tradisional</h4><ul><li>Batik canting/cap tradisional</li><li>Anyaman bakul mini bercorak</li></ul></div>
             </div>
         </div>
-
     </section>
 
-    <section id="section-video" class="content-section"><button class="btn-tutup" onclick="tutupKandungan('section-video')">Tutup X</button><h2>🎥 Video Tutorial</h2><p>Ruang untuk video tutorial seni...</p></section>
-    <section id="section-galeri" class="content-section"><button class="btn-tutup" onclick="tutupKandungan('section-galeri')">Tutup X</button><h2>🖼️ Galeri Seni</h2><p>Ruang untuk pameran lukisan murid...</p></section>
-    <section id="section-kuiz" class="content-section"><button class="btn-tutup" onclick="tutupKandungan('section-kuiz')">Tutup X</button><h2>🧩 Kuiz Minda</h2><p>Ruang untuk soalan kuiz interaktif...</p></section>
+    <section id="section-video" class="content-section">
+        <button class="btn-tutup" onclick="tutupKandungan('section-video')">Tutup X</button>
+        <h2>🎥 Video Tutorial</h2>
+        <p>Ruang untuk meletakkan video pengajaran atau tutorial seni visual KSSR.</p>
+    </section>
+
+    <section id="section-galeri" class="content-section">
+        <button class="btn-tutup" onclick="tutupKandungan('section-galeri')">Tutup X</button>
+        <h2>🖼️ Galeri Seni</h2>
+        <p>Ruang pameran digital untuk hasil kerja kreatif murid-murid.</p>
+    </section>
+
+    <section id="section-kuiz" class="content-section">
+        <button class="btn-tutup" onclick="tutupKandungan('section-kuiz')">Tutup X</button>
+        <h2>🧩 Kuiz Minda</h2>
+        <p>Ruang untuk penilaian interaktif bagi menguji kefahaman murid.</p>
+    </section>
 
     <script>
+        // Fungsi utama untuk memaparkan seksyen mengikut menu yang diklik
         function paparKandungan(menu) {
+            // Sembunyikan semua seksyen kandungan utama dahulu
             var semuaSeksyen = document.querySelectorAll('.content-section');
-            semuaSeksyen.forEach(function(seksyen) { seksyen.style.display = 'none'; });
+            semuaSeksyen.forEach(function(seksyen) { 
+                seksyen.style.display = 'none'; 
+            });
 
+            // Tampilkan seksyen yang dipilih
             var seksyenDipilih = document.getElementById('section-' + menu);
             if (seksyenDipilih) {
                 seksyenDipilih.style.display = 'block';
@@ -292,24 +363,29 @@
             }
         }
 
+        // Fungsi butang tutup seksyen utama
         function tutupKandungan(idSeksyen) {
             document.getElementById(idSeksyen).style.display = 'none';
         }
 
-        // FUNGSI BARU: Tukar paparan kandungan mengikut tahun
+        // Fungsi khusus untuk menukar paparan kandungan mengikut tahun
         function tukarTahun(tahun, butang) {
-            // Sembunyikan semua kandungan tahun dahulu
+            // Sembunyikan semua kandungan tahun terlebih dahulu
             var semuaNotaTahun = document.querySelectorAll('.nota-tahun-content');
-            semuaNotaTahun.forEach(function(nota) { nota.style.display = 'none'; });
+            semuaNotaTahun.forEach(function(nota) { 
+                nota.style.display = 'none'; 
+            });
 
-            // Buang kelas 'active' daripada semua butang tahun
+            // Buang status 'active' daripada semua butang tahun
             var semuaButang = document.querySelectorAll('.btn-tahun');
-            semuaButang.forEach(function(btn) { btn.classList.remove('active'); });
+            semuaButang.forEach(function(btn) { 
+                btn.classList.remove('active'); 
+            });
 
-            // Paparkan kandungan tahun yang dipilih
+            // Paparkan kandungan tahun spesifik yang dipilih
             document.getElementById('nota-tahun' + tahun).style.display = 'block';
             
-            // Tandakan butang yang diklik sebagai aktif
+            // Tandakan butang yang diklik sebagai aktif (bertukar warna merah)
             butang.classList.add('active');
         }
     </script>
